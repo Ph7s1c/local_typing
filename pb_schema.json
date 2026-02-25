@@ -1,0 +1,120 @@
+[
+  {
+    "id": "lt_song_uploads",
+    "name": "song_uploads",
+    "type": "base",
+    "system": false,
+    "fields": [
+      {
+        "id": "lt_su_song_id",
+        "name": "song_id",
+        "type": "text",
+        "system": false,
+        "hidden": false,
+        "presentable": false,
+        "required": true,
+        "primaryKey": false,
+        "autogeneratePattern": "",
+        "min": 0,
+        "max": 0,
+        "pattern": ""
+      },
+      {
+        "id": "lt_su_song_data",
+        "name": "song_data",
+        "type": "json",
+        "system": false,
+        "hidden": false,
+        "presentable": false,
+        "required": true,
+        "maxSize": 0
+      },
+      {
+        "id": "lt_su_popularity",
+        "name": "popularity_score",
+        "type": "number",
+        "system": false,
+        "hidden": false,
+        "presentable": false,
+        "required": false,
+        "min": null,
+        "max": null,
+        "onlyInt": false
+      },
+      {
+        "id": "lt_su_uploaded_by",
+        "name": "uploaded_by",
+        "type": "text",
+        "system": false,
+        "hidden": false,
+        "presentable": false,
+        "required": false,
+        "primaryKey": false,
+        "autogeneratePattern": "",
+        "min": 0,
+        "max": 0,
+        "pattern": ""
+      }
+    ],
+    "indexes": [],
+    "listRule": "",
+    "viewRule": "",
+    "createRule": "",
+    "updateRule": "",
+    "deleteRule": "",
+    "options": {}
+  },
+  {
+    "id": "lt_unlabeled_songs",
+    "name": "unlabeled_songs",
+    "type": "base",
+    "system": false,
+    "fields": [
+      {
+        "id": "lt_us_song_id",
+        "name": "song_id",
+        "type": "text",
+        "system": false,
+        "hidden": false,
+        "presentable": false,
+        "required": true,
+        "primaryKey": false,
+        "autogeneratePattern": "",
+        "min": 0,
+        "max": 0,
+        "pattern": ""
+      },
+      {
+        "id": "lt_us_song_data",
+        "name": "song_data",
+        "type": "json",
+        "system": false,
+        "hidden": false,
+        "presentable": false,
+        "required": true,
+        "maxSize": 0
+      },
+      {
+        "id": "lt_us_uploaded_by",
+        "name": "uploaded_by",
+        "type": "text",
+        "system": false,
+        "hidden": false,
+        "presentable": false,
+        "required": false,
+        "primaryKey": false,
+        "autogeneratePattern": "",
+        "min": 0,
+        "max": 0,
+        "pattern": ""
+      }
+    ],
+    "indexes": [],
+    "listRule": "",
+    "viewRule": "",
+    "createRule": "",
+    "updateRule": "",
+    "deleteRule": "",
+    "options": {}
+  }
+]

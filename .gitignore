@@ -1,0 +1,18 @@
+# PocketBase
+backend/pocketbase
+backend/pb_data/
+
+# Python
+lyrics_server/venv/
+lyrics_server/.env
+lyrics_server/__pycache__/
+lyrics_server/*.csv
+*.csv
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+
+# macOS
+.DS_Store
