@@ -11,7 +11,7 @@ const isLoading = ref(true);
 
 const fetchSongs = async () => {
     try {
-        const records = await pb.collection('song_uploads').getList(1, 100, { sort: '-created' });
+        const records = await pb.collection('song_uploads').getList(1, 100);
         songs.value = records.items.map(record => {
             let songData = {};
             try {
@@ -30,7 +30,7 @@ const fetchSongs = async () => {
         });
     } catch (error) {
         console.error('Error fetching songs:', error);
-        toast.error('Failed to load songs. Is PocketBase running?');
+        toast.error(`Failed to load songs: ${error?.message || error}`);
     } finally {
         isLoading.value = false;
     }
