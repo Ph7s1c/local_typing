@@ -163,7 +163,7 @@ def download_info(video_id):
         return None
 
 @app.get("/", response_model=LyricsResponse)
-async def get_lyrics(video_id: str):
+def get_lyrics(video_id: str):
     if not video_id:
         raise HTTPException(status_code=400, detail="video_id is required")
 
@@ -233,7 +233,7 @@ async def get_lyrics(video_id: str):
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/plain", response_model=LyricsResponse)
-async def plain_lyrics(video_id: str):
+def plain_lyrics(video_id: str):
     if not video_id:
         raise HTTPException(status_code=400, detail="video_id is required")
 
