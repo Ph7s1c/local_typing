@@ -4,6 +4,7 @@ import re
 import uvicorn
 import csv
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import syncedlyrics
 from googleapiclient.discovery import build
@@ -15,6 +16,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_methods=["GET"],
+)
 
 pb = PocketBase(os.getenv("PB_URL", "http://127.0.0.1:8090"))
 

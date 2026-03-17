@@ -83,7 +83,7 @@ const displayData = async (data, song_id) => {
     const numEntries = resolvedData.length;
     if (numEntries === 0) {
         const response = await createData(song_id);
-        if (!response.upload_id) {
+        if (!response || !response.upload_id) {
             return
         }
         query_parameters.id = response.upload_id;

@@ -85,6 +85,7 @@ const fetchGameData = async (id) => {
         gameData.value = gameDetails.song_data;
         applyGameSettings();
     } catch (error) {
+        console.error('fetchGameData error:', error);
         if (error.response) {
             switch (error.response.status) {
                 case 404:
